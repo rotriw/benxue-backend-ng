@@ -18,6 +18,15 @@ utilList.forEach(file => {
 	}
 });
 
+utilList.forEach(file => {
+	if (file == 'require.config.js' || file == '.DS_Store') {
+		return;
+	} else {
+		const requirePath = path.join('../', 'utils', file);
+		utils[path.parse(requirePath).name].init(utils);
+	}
+});
+
 const packages = fs.readdirSync('./packages/handle');
 
 packages.forEach(file => {
@@ -25,5 +34,5 @@ packages.forEach(file => {
 		return;
 	}
 	const requirePath = path.join('../', 'packages', 'handle', file);
-	core.plugin(require(requirePath));
+	core.plugin(require(requirePath), utils);
 });
