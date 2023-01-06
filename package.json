@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "esbuild": "^0.16.14"
+    "cordis": "^2.6.0",
+    "esbuild": "^0.16.14",
+    "node-fetch-commonjs": "^3.2.4",
+    "uuid": "9.0.0"
   }
 }
