@@ -1,3 +1,0 @@
-module.apply = function() {
-	
-}

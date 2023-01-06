@@ -1,3 +1,3 @@
-module.apply = function(ctx) {
+exports.apply = function (ctx) {
 	
-}
+};
