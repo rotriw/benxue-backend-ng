@@ -1,0 +1,6 @@
+# Base
+node_modules/
+__*
+!__mocks__
+!.gitkeep
+*.local
