@@ -1,9 +1,9 @@
-const zhixue = require("../model/request");
+const {zhixue} = require("../model/request");
 exports.apply = function (ctx, utils) {
 	utils.express.app.post('/login', async(req, res) => {
 		/*
 		Request Parameters:
-			username: string 		//username for Zhixue.net
+			username: string 		//username for zhixue.com
 			password: string
 		Response Data:
             token: string;
@@ -19,6 +19,7 @@ exports.apply = function (ctx, utils) {
                 name: string;
 			};
 		*/
+		console.log(zhixue);
 		res.send(await zhixue.login(req.body.username, req.body.password));
 	});
 };
